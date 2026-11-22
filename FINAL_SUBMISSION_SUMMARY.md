@@ -12,7 +12,7 @@
 
 ## Latest local verification
 Executed from the repository root using `python run_all.py`:
-- Part 1A: 10/11 unit/contract tests passed.
+- Part 1A: 11/11 unit/contract tests passed.
 - Part 1B: 4/4 unit tests passed.
 - Part 1A: syntax compilation, lightweight style gate and focused AST security gate passed (four harness gates total).
 - Part 1B: 15/15 evaluation cases passed; schema 100%; invariant 100%; semantic 46/46 = 1.00; aggregate PASS.

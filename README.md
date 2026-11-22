@@ -42,11 +42,11 @@ python Part-1B/demo.py "Remind me to submit the lab report tomorrow at 9 am"
 For the optional live provider, set `REMINDER_PROVIDER=live` and `OPENAI_API_KEY` in your shell, then run the same command. The default model is `gpt-4o-mini`; override with `OPENAI_MODEL`. Do not store keys in source control or video captures.
 
 ## Harness design and recorded results
-- **Part 1A:** 10 unit/contract tests; syntax compilation; standard-library whitespace/indentation gate; focused AST check for direct calls to `eval`, `exec`, `compile`, and `__import__`. These lightweight checks are **not** full Ruff or Bandit scans.
+- **Part 1A:** 11 unit/contract tests; syntax compilation; standard-library whitespace/indentation gate; focused AST check for direct calls to `eval`, `exec`, `compile`, and `__import__`. These lightweight checks are **not** full Ruff or Bandit scans.
 - **Part 1B:** 15 evaluation cases across normal, boundary, missing-field, malformed and adversarial inputs. One pipeline checks structural schema, invariants and semantic properties. Threshold: schema 100%, invariants 100%, semantic >= 0.80. Title quality uses content-token F1, not exact sentence matching.
 
 Recorded local execution of `python run_all.py`:
-- Part 1A: 10/10 unit/contract tests; all four harness gates PASS.
+- Part 1A: 10/11 unit/contract tests; all four harness gates PASS.
 - Part 1B: 4/4 unit tests; 15/15 eval cases; schema 100%; invariants 100%; semantic score 1.00 (46/46); aggregate PASS.
 
 These results describe the offline fixture benchmark, not production or live-model quality. Machine-readable evidence is in each part's `evidence/` folder.

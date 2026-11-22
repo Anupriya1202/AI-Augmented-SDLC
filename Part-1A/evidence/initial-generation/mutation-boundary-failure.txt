@@ -1,0 +1,7 @@
+Command: python -m unittest discover -s Part-1A/tests -p test_task_manager.py -v
+Result: FAILED before the repair (1 failure, 10 passing tests).
+
+FAIL: test_returned_task_cannot_mutate_internal_tags
+AssertionError: Lists differ: ['safe', 'tampered'] != ['safe']
+
+The task returned by create() exposed the same nested tags list held by the manager. Appending to that returned list silently changed stored state.

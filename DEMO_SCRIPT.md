@@ -27,7 +27,7 @@ Run:
 python run_all.py
 ```
 
-Show Part 1A's 10 unit/contract tests and four harness gates, Part 1B's four unit tests, and the 15-case structural/invariant/semantic evaluation. Clearly state that the benchmark uses the deterministic offline `FixtureProvider`, not a live LLM. Part 1A's style/security checks are focused standard-library checks, not full Ruff/Bandit scans.
+Show Part 1A's 11 unit/contract tests and four harness gates, Part 1B's four unit tests, and the 15-case structural/invariant/semantic evaluation. Clearly state that the benchmark uses the deterministic offline `FixtureProvider`, not a live LLM. Part 1A's style/security checks are focused standard-library checks, not full Ruff/Bandit scans.
 
 ## Recording guidance
 - A silent terminal capture is sufficient; add short captions for Part 1A, Part 1B and the harness result.

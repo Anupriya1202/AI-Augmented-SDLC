@@ -9,3 +9,4 @@
 7. Tests and mandatory harness gates must not be removed or weakened to obtain PASS.
 8. No credentials, personal data, or secrets may be committed.
 9. The final decision is made by a human after reviewing test, lint, and SAST evidence.
+10. Public Task return values must be defensive copies; mutating a returned object must not bypass service validation or alter stored state.

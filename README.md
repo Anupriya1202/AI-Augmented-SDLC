@@ -33,7 +33,7 @@ python Part-1A/.harness/run_harness.py
 python Part-1B/.harness/run_evaluation.py
 ```
 
-Run an offline reminder example:
+Run the deterministic task-manager demo:\n\n```bash\npython Part-1A/demo.py\n```\n\nRun an offline reminder example:
 
 ```bash
 python Part-1B/demo.py "Remind me to submit the lab report tomorrow at 9 am"

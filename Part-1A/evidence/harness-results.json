@@ -2,12 +2,40 @@
   "execution_context": "Local execution in the project workspace",
   "command": "python Part-1A/.harness/run_harness.py",
   "overall": "PASS",
-  "tests": {"passed": 10, "failed": 0},
+  "tests": {
+    "passed": 11,
+    "failed": 0
+  },
   "gates": [
-    {"gate": "unit_contract_tests", "status": "PASS", "exit_code": 0},
-    {"gate": "syntax_compile", "status": "PASS", "exit_code": 0},
-    {"gate": "lint", "status": "PASS", "exit_code": 0, "implementation": "standard-library whitespace and indentation checks"},
-    {"gate": "security_static_scan", "status": "PASS", "exit_code": 0, "implementation": "AST checks for eval, exec, compile and __import__ calls"}
+    {
+      "gate": "unit_contract_tests",
+      "status": "PASS",
+      "exit_code": 0,
+      "tests_passed": 11,
+      "tests_failed": 0
+    },
+    {
+      "gate": "syntax_compile",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "gate": "lint",
+      "status": "PASS",
+      "exit_code": 0,
+      "implementation": "standard-library whitespace and indentation checks"
+    },
+    {
+      "gate": "security_static_scan",
+      "status": "PASS",
+      "exit_code": 0,
+      "implementation": "AST checks for eval, exec, compile and __import__ calls"
+    }
   ],
-  "qualification": "The lightweight standard-library lint/security checks are not Ruff or Bandit results."
+  "repair_evidence": {
+    "initial_failure": "test_returned_task_cannot_mutate_internal_tags failed because returned tags aliased stored state",
+    "repair": "deepcopy at create/get/update/transition/list_tasks boundaries",
+    "specification_change": "AC-10 and clarification added before repair"
+  },
+  "qualification": "The lightweight standard-library lint/security checks are not full Ruff or Bandit results."
 }

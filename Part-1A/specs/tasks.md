@@ -7,3 +7,4 @@
 - T6 Write specification-derived unit/contract tests.
 - T7 Add lint, SAST, and test harness gates with machine-readable output.
 - T8 Review limitations and record human acceptance decision after actual execution.
+- T9 Add a regression test for mutable nested data escaping the service boundary and return defensive copies.

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -84,11 +85,11 @@ class TaskManager:
         timestamp = _now()
         task = Task(task_id, title, description, tags, priority, "todo", timestamp, timestamp)
         self._tasks[task_id] = task
-        return task
+        return deepcopy(task)
 
     def get(self, task_id: str) -> Task:
         try:
-            return self._tasks[task_id]
+            return deepcopy(self._tasks[task_id])
         except KeyError as exc:
             raise TaskNotFound(f"task '{task_id}' not found") from exc
 
@@ -112,7 +113,7 @@ class TaskManager:
         values["updated_at"] = _now()
         updated = Task(**values)
         self._tasks[task_id] = updated
-        return updated
+        return deepcopy(updated)
 
     def transition(self, task_id: str, new_status: str) -> Task:
         current = self.get(task_id)
@@ -125,7 +126,7 @@ class TaskManager:
         values["updated_at"] = _now()
         updated = Task(**values)
         self._tasks[task_id] = updated
-        return updated
+        return deepcopy(updated)
 
     def delete(self, task_id: str) -> None:
         if task_id not in self._tasks:
@@ -142,7 +143,8 @@ class TaskManager:
                  if (tag is None or tag in task.tags)
                  and (priority is None or task.priority == priority)
                  and (status is None or task.status == status)]
-        return sorted(items, key=lambda task: (PRIORITY_RANK[task.priority], task.created_at, task.id))
+        ordered = sorted(items, key=lambda task: (PRIORITY_RANK[task.priority], task.created_at, task.id))
+        return deepcopy(ordered)
 
     def save(self, path: str | Path) -> None:
         destination = Path(path)

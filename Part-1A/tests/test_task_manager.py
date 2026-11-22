@@ -75,6 +75,12 @@ class TaskManagerTests(unittest.TestCase):
                 TaskManager.load(path)
             self.assertEqual(path.read_text(encoding="utf-8"), "{broken")
 
+    def test_returned_task_cannot_mutate_internal_tags(self):
+        manager = TaskManager()
+        created = manager.create("isolated", "Keep tags isolated", tags=["safe"])
+        created.tags.append("tampered")
+        self.assertEqual(manager.get("isolated").tags, ["safe"])
+
     def test_rejects_duplicate_tags(self):
         with self.assertRaises(TaskError):
             TaskManager().create("x", "Task", tags=["a", "a"])

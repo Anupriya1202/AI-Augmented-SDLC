@@ -15,6 +15,7 @@ A task contains `id`, `title`, `description`, `tags`, `priority`, `status`, `cre
 - FR-06 Sort task lists by priority high-to-low, then creation time ascending, then ID ascending.
 - FR-07 Persist and reload tasks using JSON without losing fields.
 - FR-08 Enforce the constitution's status transition graph.
+- FR-09 Return defensive copies of task data; caller mutation of a returned task or its tags must not mutate the manager's stored state.
 
 ## Acceptance criteria
 - AC-01 Empty/whitespace title is rejected.
@@ -26,6 +27,7 @@ A task contains `id`, `title`, `description`, `tags`, `priority`, `status`, `cre
 - AC-07 Sorting is stable and follows the exact tie-break rules above.
 - AC-08 JSON round-trip preserves all task fields.
 - AC-09 Malformed JSON raises a clear persistence error and does not overwrite the source file.
+- AC-10 Mutating the tags list on a Task returned by create/get/update/list does not change the stored task; state changes must go through validated service methods.
 
 ## Non-functional requirements
 Python 3.11+, standard library runtime, deterministic behavior, no network calls, no secrets, and testable public methods. Lint and SAST are mandatory gates.

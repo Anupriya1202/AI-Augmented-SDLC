@@ -11,8 +11,8 @@
     "invariant_pass_rate": 1,
     "semantic_score": 1,
     "semantic_points": {
-      "earned": 45,
-      "possible": 45
+      "earned": 46,
+      "possible": 46
     }
   },
   "overall": "PASS",
@@ -114,9 +114,16 @@
         "errors": []
       },
       "semantic": {
-        "earned": 4,
-        "possible": 4,
-        "score": 1
+        "earned": 5,
+        "possible": 5,
+        "score": 1,
+        "checks": {
+          "intent": true,
+          "reminder_id": true,
+          "date": true,
+          "time": true,
+          "safety": true
+        }
       }
     },
     {

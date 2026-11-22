@@ -1,0 +1,276 @@
+{
+  "generated_at_utc": "2026-11-22T19:53:17.620144+00:00",
+  "provider": "FixtureProvider (offline fixture; not a live LLM)",
+  "reference_date": "2026-11-23",
+  "dataset_size": 15,
+  "threshold": 0.8,
+  "scoring": "PASS iff schema=100%, invariants=100%, semantic >= 0.80",
+  "semantic_rubric": "Intent/date/time/snooze duration are structured property checks; title quality uses content-token F1 >= 0.75; safety checks clarification for underspecified or unsupported requests.",
+  "metrics": {
+    "schema_pass_rate": 1,
+    "invariant_pass_rate": 1,
+    "semantic_score": 1,
+    "semantic_points": {
+      "earned": 45,
+      "possible": 45
+    }
+  },
+  "overall": "PASS",
+  "cases": [
+    {
+      "id": "E01",
+      "intent": "create",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 5,
+        "possible": 5,
+        "score": 1
+      }
+    },
+    {
+      "id": "E02",
+      "intent": "create",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 5,
+        "possible": 5,
+        "score": 1
+      }
+    },
+    {
+      "id": "E03",
+      "intent": "create",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 5,
+        "possible": 5,
+        "score": 1
+      }
+    },
+    {
+      "id": "E04",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E05",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E06",
+      "intent": "reschedule",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 4,
+        "possible": 4,
+        "score": 1
+      }
+    },
+    {
+      "id": "E07",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E08",
+      "intent": "snooze",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 3,
+        "possible": 3,
+        "score": 1
+      }
+    },
+    {
+      "id": "E09",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E10",
+      "intent": "create",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 5,
+        "possible": 5,
+        "score": 1
+      }
+    },
+    {
+      "id": "E11",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E12",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E13",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E14",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "E15",
+      "intent": "clarify",
+      "schema": {
+        "pass": true,
+        "errors": []
+      },
+      "invariants": {
+        "pass": true,
+        "errors": []
+      },
+      "semantic": {
+        "earned": 2,
+        "possible": 2,
+        "score": 1
+      }
+    }
+  ]
+}

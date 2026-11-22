@@ -1,4 +1,4 @@
-"""Run the reminder agent with the offline fixture or optional live model."""
+"""Run the reminder agent using offline fixtures or optional live provider."""
 from __future__ import annotations
 import json
 import os
@@ -11,7 +11,7 @@ from src.reminder_agent import FixtureProvider, ReminderAgent  # noqa: E402
 
 mode = os.environ.get("REMINDER_PROVIDER", "fixture").lower()
 if mode == "live":
-    from src.live_provider import OpenAICompatibleProvider
+    from src.reminder_agent import OpenAICompatibleProvider
     provider = OpenAICompatibleProvider()
 else:
     provider = FixtureProvider()
